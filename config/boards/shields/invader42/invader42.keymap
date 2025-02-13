@@ -100,10 +100,10 @@
 
         lower_layer {
             bindings = <
-&kp ESCAPE  &bt BT_CLR  &kp C_VOLUME_UP    &none        &none                 &tog 0          &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &kp RIGHT_BRACKET
-&kp TAB     &none       &kp C_VOLUME_DOWN  &none        &none                 &tog 3          &bt BT_CLR_ALL  &none         &kp STAR      &kp LPAR      &mt COLON SEMICOLON  &kp MINUS
-&kp LALT    &none       &none              &none        &none                 &kp LEFT_WIN    &kp UP          &none         &none         &kp PERIOD    &mt QUESTION SLASH   &mt RALT MINUS
-                                           &lt 1 LCTRL  &mt LEFT_SHIFT SPACE  &lt 2 ENTER     &kp LEFT        &kp DOWN      &kp RIGHT
+&kp ESCAPE  &bt BT_CLR  &kp C_VOLUME_UP    &bootloader     &none                 &tog 0          &bt BT_SEL 0    &bt BT_SEL 1  &bootloader     &bt BT_SEL 3  &bt BT_SEL 4         &kp RIGHT_BRACKET
+&kp TAB     &none       &kp C_VOLUME_DOWN  &studio_unlock  &none                 &tog 3          &bt BT_CLR_ALL  &none         &studio_unlock  &kp LPAR      &mt COLON SEMICOLON  &kp MINUS
+&kp LALT    &none       &none              &none           &none                 &kp LEFT_WIN    &kp UP          &none         &none           &kp PERIOD    &mt QUESTION SLASH   &mt RALT MINUS
+                                           &lt 1 LCTRL     &mt LEFT_SHIFT SPACE  &lt 2 ENTER     &kp LEFT        &kp DOWN      &kp RIGHT
             >;
         };
 
@@ -118,11 +118,20 @@
 
         adjust_layer {
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E      &kp R           &kp T        &kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6
-&kp TAB         &kp A  &kp S  &kp D      &kp F           &kp G        &kp H            &kp J              &kp K         &kp L         &kp SEMICOLON  &lt 2 F
-&lt 1 LEFT_ALT  &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N            &kp M              &kp COMMA     &kp PERIOD    &kp SLASH      &tog 0
-                              &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &lt 1 B
+&bootloader     &none         &none         &none         &kp C_VOLUME_UP    &none    &none  &none  &none  &none  &none  &bootloader
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_VOLUME_DOWN  &none    &none  &none  &none  &none  &none  &bt BT_CLR
+&none           &none         &none         &none         &none              &none    &none  &none  &none  &none  &none  &none
+                                            &none         &none              &none    &none  &none  &none
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri-layer {
+            if-layers = <LWR RSE>;
+            then-layer = <ADJ>;
         };
     };
 };
