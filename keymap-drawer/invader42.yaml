@@ -1,6 +1,6 @@
 layers:
   default:
-  - {t: ']', h: LEFT GUI}
+  - {t: ']', h: Ctrl}
   - Q
   - W
   - E
@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - P
-  - {t: '[', h: RIGHT GUI}
-  - Ctrl
+  - {t: '[', h: RWIN}
+  - {t: '`', h: ↹}
   - A
   - S
   - D
@@ -24,7 +24,7 @@ layers:
   - L
   - ;
   - {t: '''', h: Ctrl}
-  - Alt
+  - {t: \, h: Alt}
   - Z
   - X
   - C
@@ -35,15 +35,57 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: Alt}
-  - {t: ↹, h: raise}
+  - {t: '-', h: Alt}
+  - {t: Ctrl, h: lower}
   - {t: ␣, h: Shift}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - BACKSPACE
-  - {t: ⌦, h: raise}
+  - {t: ⏎, h: raise}
+  - {t: Esc, h: raise}
+  - {t: LEFT WIN, h: RIGHT SHIFT}
+  - {t: BACKSPACE, h: lower}
   lower:
-  - _
+  - ESCAPE
+  - BT CLR
+  - VOLUME UP
+  - ''
+  - ''
+  - {t: default, h: toggle}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - ']'
+  - ↹
+  - ''
+  - VOLUME DOWN
+  - ''
+  - ''
+  - {t: adjust, h: toggle}
+  - BT CLR ALL
+  - ''
+  - '*'
+  - (
+  - {t: ;, h: ':'}
+  - '-'
+  - Alt
+  - ''
+  - ''
+  - ''
+  - ''
+  - LEFT WIN
+  - ↑
+  - ''
+  - ''
+  - .
+  - {t: /, h: '?'}
+  - {t: '-', h: Alt}
+  - {t: Ctrl, h: lower, type: held}
+  - {t: ␣, h: LEFT SHIFT}
+  - {t: ENTER, h: raise}
+  - ←
+  - ↓
+  - →
+  raise:
   - F1
   - F2
   - F3
@@ -55,7 +97,19 @@ layers:
   - F9
   - F10
   - F11
-  - {t: +, h: Ctrl}
+  - F12
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - '='
   - '!'
   - '@'
   - '#'
@@ -66,176 +120,67 @@ layers:
   - '*'
   - (
   - )
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - {t: ▽, type: trans}
-  - {t: ↹, h: adjust}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ⌦, h: adjust}
-  raise:
-  - KP NUM
-  - /
-  - '1'
-  - '2'
-  - '3'
-  - '-'
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
-  - SLCK
-  - Caps Lock
-  - {t: '=', h: Ctrl}
-  - '*'
-  - '4'
-  - '5'
-  - '6'
-  - +
-  - MUTE
-  - ←
-  - ↑
-  - →
-  - Insert
-  - {t: APP, h: Ctrl}
-  - {t: ▽, type: trans}
-  - '0'
-  - '7'
-  - '8'
-  - '9'
-  - .
-  - Vol Down
-  - End
-  - ↓
-  - Page Down
-  - Pause Break
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ⏎, h: adjust}
-  - {t: Esc, h: adjust}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '{'
+  - '}'
+  - {t: Ctrl, h: adjust}
+  - {t: ␣, h: RIGHT SHIFT}
+  - {t: ⏎, h: raise, type: held}
+  - {t: Esc, h: raise}
+  - {t: LEFT WIN, h: RIGHT SHIFT}
+  - {t: BACKSPACE, h: adjust}
   adjust:
-  - Boot
-  - Reset
-  - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Boot
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
-  - BT 5
-  - BT 4
-  - BT 3
-  - BT 2
-  - BT 1
-  - BT CLR
-  - OUT TOG
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - OUT TOG
-  - {type: held}
-  - ''
-  - {type: held}
-  - {t: ▽, type: trans}
-  - ''
-  - {t: ▽, type: trans}
-  game:
-  - ESCAPE
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - F1
-  - F2
-  - T
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - VOLUME UP
-  - LEFT SHIFT
+  - Esc
   - Q
   - W
   - E
   - R
-  - G
-  - '`'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Alt+ ↹
-  - Vol Down
-  - Ctrl
+  - T
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - ↹
   - A
   - S
   - D
-  - B
   - F
-  - {t: ▽, type: trans}
-  - M
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Win Prev
-  - MUTE
-  - C
-  - ␣
-  - ↹
+  - G
+  - H
+  - J
   - K
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - L
+  - ;
+  - {t: F, h: raise}
+  - {t: LEFT ALT, h: lower}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: default, h: toggle}
+  - {t: Ctrl, type: held}
+  - LEFT SHIFT
+  - {t: ␣, type: held}
+  - VOLUME UP
+  - VOLUME DOWN
+  - LEFT WIN
 combos:
-- p: [27, 14]
-  k: {t: game, h: toggle}
-  l: [default]
-- p: [15, 3]
-  k: {t: default, h: toggle}
-  l: [game]
-- p: [37, 38]
-  k: ⌦
-  l: [default]
+- p: [25, 26]
+  k: Ctl+C
+- p: [26, 27]
+  k: Ctl+V
 - p: [36, 37]
-  k: BACKSPACE
-  l: [default]
-- p: [37, 38]
-  k: K
-  l: [game]
-- p: [2, 3, 4]
-  k: Ctl+ C
-  l: [default]
-- p: [2, 4]
-  k: Ctl+ V
-  l: [default]
-- p: [2, 3]
-  k: Ctl+ X
-  l: [default]
+  k: LEFT WIN
+- p: [0, 1]
+  k: ESCAPE
+- p: [24, 25, 26]
+  k: Sft+LEFT ALT
+- p: [10, 11]
+  k: ⌦
