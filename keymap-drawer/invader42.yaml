@@ -1,9 +1,10 @@
+layout: {zmk_keyboard: invader42}
 layers:
   default:
   - {t: ']', h: Ctrl}
   - Q
   - W
-  - E
+  - W
   - R
   - T
   - Y
